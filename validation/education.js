@@ -9,20 +9,20 @@ module.exports = function validateEducationInput(data) {
   data.fieldofstudy = !isEmpty(data.fieldofstudy) ? data.fieldofstudy : "";
   data.from = !isEmpty(data.from) ? data.from : "";
 
-  if (!validator.isEmpty(data.school)) {
+  if (validator.isEmpty(data.school)) {
     errors.school = "School title is required";
   }
 
-  if (!validator.isEmpty(data.degree)) {
+  if (validator.isEmpty(data.degree)) {
     errors.degree = "Degree is required";
   }
 
-  if (!validator.isEmpty(data.fieldofstudy)) {
+  if (validator.isEmpty(data.fieldofstudy)) {
     errors.fieldofstudy = "Field of study is required";
   }
 
-  if (!validator.isEmpty(data.from)) {
-    errors.title = "From date is required";
+  if (validator.isEmpty(data.from)) {
+    errors.from = "From date is required";
   }
 
   return {
