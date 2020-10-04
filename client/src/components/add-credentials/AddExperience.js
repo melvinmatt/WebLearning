@@ -26,9 +26,9 @@ class AddExperience extends Component {
     this.onCheck = this.onCheck.bind(this);
   }
 
-  static getDerivedStateFromProps(nextProps, state) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
-      return { errors: nextProps.errors };
+      this.setState({ errors: nextProps.errors });
     }
   }
 
@@ -129,7 +129,7 @@ class AddExperience extends Component {
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="* Job Description"
+                  placeholder="Job Description"
                   name="description"
                   value={this.state.description}
                   onChange={this.onChange}

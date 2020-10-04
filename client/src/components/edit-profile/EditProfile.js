@@ -38,7 +38,7 @@ class EditProfile extends Component {
     this.props.getCurrentProfile();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
