@@ -63,7 +63,7 @@ function App() {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
             <Switch>
-              <PrivateRoute exact path="/profiles" component={CreateProfile} />
+              <PrivateRoute exact path="/profiles" component={Profiles} />
             </Switch>
             <Switch>
               <PrivateRoute
